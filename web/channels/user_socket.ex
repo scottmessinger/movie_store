@@ -3,6 +3,7 @@ defmodule MovieStore.UserSocket do
 
   ## Channels
   # channel "rooms:*", MovieStore.RoomChannel
+  channel "tickets:lobby", MovieStore.TicketChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
