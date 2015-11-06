@@ -1,0 +1,18 @@
+<h2>Show theater</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @theater.name %>
+  </li>
+
+  <li>
+    <strong>Capacity:</strong>
+    <%= @theater.capacity %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: theater_path(@conn, :edit, @theater) %>
+<%= link "Back", to: theater_path(@conn, :index) %>

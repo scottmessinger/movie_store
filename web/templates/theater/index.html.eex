@@ -1,0 +1,28 @@
+<h2>Listing theaters</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Capacity</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for theater <- @theaters do %>
+    <tr>
+      <td><%= theater.name %></td>
+      <td><%= theater.capacity %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: theater_path(@conn, :show, theater), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: theater_path(@conn, :edit, theater), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: theater_path(@conn, :delete, theater), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New theater", to: theater_path(@conn, :new) %>

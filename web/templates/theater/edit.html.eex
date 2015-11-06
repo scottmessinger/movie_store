@@ -1,0 +1,6 @@
+<h2>Edit theater</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: theater_path(@conn, :update, @theater) %>
+
+<%= link "Back", to: theater_path(@conn, :index) %>
