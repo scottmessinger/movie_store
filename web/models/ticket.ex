@@ -8,7 +8,7 @@ defmodule MovieStore.Ticket do
     timestamps
   end
 
-  @required_fields ~w(quantity)
+  @required_fields ~w(quantity showing_id)
   @optional_fields ~w()
 
   @doc """

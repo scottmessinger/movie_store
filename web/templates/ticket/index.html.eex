@@ -4,7 +4,10 @@
   <thead>
     <tr>
       <th>Showing</th>
+      <th>Info</th>
       <th>Quantity</th>
+      <th>Movie</th>
+      <th>Theater</th>
 
       <th></th>
     </tr>
@@ -13,7 +16,10 @@
 <%= for ticket <- @tickets do %>
     <tr>
       <td><%= ticket.showing_id %></td>
+      <td><%= render "movie_info.html", ticket: ticket %></td>
       <td><%= ticket.quantity %></td>
+      <td><%= ticket.showing.movie.name %></td>
+      <td><%= ticket.showing.theater.name %></td>
 
       <td class="text-right">
         <%= link "Show", to: ticket_path(@conn, :show, ticket), class: "btn btn-default btn-xs" %>

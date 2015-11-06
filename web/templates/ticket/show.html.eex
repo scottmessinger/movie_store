@@ -4,13 +4,19 @@
 
   <li>
     <strong>Showing:</strong>
-    <%= @ticket.showing_id %>
+      <%= @ticket.showing_id %>
   </li>
 
   <li>
     <strong>Quantity:</strong>
     <%= @ticket.quantity %>
   </li>
+
+  <li>
+    <strong>Showing:</strong>
+    <%= render "movie_info.html", ticket: @ticket %>
+  </li>
+
 
 </ul>
 

@@ -1,0 +1,1 @@
+<%= @ticket.showing.movie.name %> at <%= @ticket.showing.theater.name %> (<%= @ticket.showing.start_at %>)
