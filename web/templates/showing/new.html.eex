@@ -1,0 +1,7 @@
+<h2>New showing</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: showing_path(@conn, :create),
+                        theaters: @theaters %>
+
+<%= link "Back", to: showing_path(@conn, :index) %>

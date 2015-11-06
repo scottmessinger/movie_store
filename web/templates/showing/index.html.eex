@@ -1,0 +1,34 @@
+<h2>Listing showings</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Start at</th>
+      <th>Theater</th>
+      <th>Movie</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for showing <- @showings do %>
+    <tr>
+      <td><%= showing.start_at %></td>
+      <td><%= showing.theater.name %></td>
+      <td>
+        <%= if showing.movie do %>
+          <%= showing.movie.name %>
+        <%= end %>
+      </td>
+
+      <td class="text-right">
+        <%= link "Show", to: showing_path(@conn, :show, showing), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: showing_path(@conn, :edit, showing), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: showing_path(@conn, :delete, showing), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New showing", to: showing_path(@conn, :new) %>
