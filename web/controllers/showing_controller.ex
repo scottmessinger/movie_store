@@ -24,7 +24,7 @@ defmodule MovieStore.ShowingController do
         |> put_flash(:info, "Showing created successfully.")
         |> redirect(to: showing_path(conn, :index))
       {:error, changeset} ->
-        render(conn, "new.html", changeset: changeset)
+        render(conn, "new.html", changeset: changeset, theaters: theater_dropdowns, movies: movie_dropdowns)
     end
   end
 

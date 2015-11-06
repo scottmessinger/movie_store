@@ -9,7 +9,9 @@
 
   <li>
     <strong>Theater:</strong>
-    <%= @showing.theater.name %>
+    <% if @showing.theater do %>
+      <%= @showing.theater.name %>
+    <% end %>
   </li>
 
   <li>
