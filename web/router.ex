@@ -20,6 +20,8 @@ defmodule MovieStore.Router do
     resources "/theaters", TheaterController
     resources "/movies",   MovieController
     resources "/showings", ShowingController
+    resources "/tickets", TicketController
+
   end
 
   # Other scopes may use custom stacks.

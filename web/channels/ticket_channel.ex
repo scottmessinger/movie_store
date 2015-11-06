@@ -26,6 +26,8 @@ defmodule MovieStore.TicketChannel do
   # to the client. The default implementation is just to push it
   # downstream but one could filter or change the event.
   def handle_out(event, payload, socket) do
+    IO.puts("Handle out for the ticket channel")
+    IO.inspect(socket)
     push socket, event, payload
     {:noreply, socket}
   end

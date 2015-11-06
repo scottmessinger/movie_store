@@ -1,0 +1,18 @@
+<h2>Show ticket</h2>
+
+<ul>
+
+  <li>
+    <strong>Showing:</strong>
+    <%= @ticket.showing_id %>
+  </li>
+
+  <li>
+    <strong>Quantity:</strong>
+    <%= @ticket.quantity %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: ticket_path(@conn, :edit, @ticket) %>
+<%= link "Back", to: ticket_path(@conn, :index) %>
