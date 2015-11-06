@@ -18,6 +18,7 @@ defmodule MovieStore.Router do
 
     get "/", PageController, :index
     resources "/theaters", TheaterController
+    resources "/movies", MovieController
   end
 
   # Other scopes may use custom stacks.
